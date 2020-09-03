@@ -1,0 +1,68 @@
+html, body{
+    overflow: hidden;
+}
+
+html, body {
+    /* background: linear-gradient(0deg, rgba(228,89,90,1) 0%, rgba(118,223,190,1) 100%); */
+    /* background: black; */
+    background: none;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 15deg);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: perspective(500px) translateZ(10px);
+    }
+    to {
+        transform: perspective(500px) translateZ(50px);
+    }
+}
+
+@keyframes zoomBack {
+    from {
+        transform: perspective(500px) translateZ(50px);
+    }
+    to {
+        transform: perspective(500px) translateZ(10px);
+    }
+}
+
+#defaultCanvas0 {
+    position: absolute;
+    background: none;
+    z-index: 2;
+}
+
+#defaultCanvas0.zoom {
+    animation-name: zoom;
+    animation-duration: 0.1s;
+}
+
+#background-canvas {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#logo-background {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+img {
+    width: 196px;
+    height: 196px;
+    position: absolute;
+    z-index: 4;
+    transform: perspective(500px) translateZ(200px);
+}
