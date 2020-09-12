@@ -2,8 +2,8 @@ let currentRotation = -25
 let rotationDirection = .11
 let pills = []
 let threshold = -36
-const player = new Tone.Player("./song.mp3")
-const fft = new Tone.FFT(32)
+const player = new Tone.Player("./Aries.m4a")
+const fft = new Tone.FFT(128)
 let canAnimate = true
 player.autostart = true
 player.connect(fft)
